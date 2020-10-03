@@ -1,8 +1,11 @@
-# nuxt-stisla
+# NUXT-STISLA
 
-## Build Setup
+> Stisla Bootstrap Admin Template based on NuxtJs Framework
 
-```bash
+
+## Getting started
+
+``` bash
 # install dependencies
 $ npm install
 
@@ -11,10 +14,16 @@ $ npm run dev
 
 # build for production and launch server
 $ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+$ npm start
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## NuxtJs
+NuxtJs is a vue meta Framework to create complex, fast & universal web applications quickly.
+
+## Stisla
+Stisla is a Free Bootstrap Admin Template which will help you to speed up your project and design your own dashboard UI. Users will love it.
+
+#### Special thanks
+- [NuxtJs](https://nuxtjs.org/) for the wonderful vue framework <3
+- [Stisla](https://getstisla.com/) for the beautiful bootstrap admin template
