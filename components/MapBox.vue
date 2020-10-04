@@ -1,15 +1,7 @@
 <template>
-    <section class="section">
-        <div class="section-header">
-            <h1>Map Test</h1>
-        </div>
+    <div id="map">
 
-        <div class="card">
-            <div class="card-body">
-                <div id="map"></div>
-            </div>
-        </div>
-    </section>
+    </div>
 </template>
 
 <script>
@@ -18,8 +10,8 @@ import { Map } from 'mapbox-gl';
 
 export default {
     layout: 'dashboard',
-
-    setup () {
+    props: ['long', ,'lat', 'zoom'],
+    setup (props) {
         const access_token = ref('pk.eyJ1IjoiZ3VuYXlhIiwiYSI6ImNrZnVmdDQ1bzJkaGMycXM1YzRrdzEyNncifQ.7NlbCI5Iv3wuJrGLNzc3_w');
         const map = ref({});
 
@@ -29,23 +21,18 @@ export default {
                 accessToken: access_token.value,
                 container: 'map',
                 style: 'mapbox://styles/mapbox/streets-v11',
-                zoom: 11,
-                center: [107.6, -6.90]
+                zoom: props.zoom,
+                center: [props.long, props.lat]
             })
         }
 
         onMounted(() => {
             createMap()
         })
-
-        return {
-            access_token, map
-        }
-
     }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>

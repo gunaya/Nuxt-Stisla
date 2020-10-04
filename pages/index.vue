@@ -82,7 +82,9 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <canvas height="182"></canvas>
+                        <!-- chart component -->
+                        <line-chart :data="chart.barChartData" :options="chart.barChartOptions" :height="182" />
+
                         <div class="statistic-details mt-sm-4">
                             <div class="statistic-details-item">
                                 <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span> 7%</span>
@@ -132,9 +134,62 @@
                                     <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
                                 </div>
                             </li>
+                            <li class="media">
+                                <img class="mr-3 rounded-circle" width="50" src="~/assets/img/avatar/avatar-3.png" alt="avatar">
+                                <div class="media-body">
+                                    <div class="float-right text-primary">1h</div>
+                                    <div class="media-title">Farhan C Mujib</div>
+                                    <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
+                                </div>
+                            </li>
                         </ul>
                         <div class="text-center pt-1 pb-1">
                             <a class="btn btn-primary btn-lg btn-round">View All</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-12 col-sm-12">
+                <div class="card">
+                    <div class="card-body pt-2 pb-2">
+                        <div id="myWeather">Please wait</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Authors</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row pb-2">
+                            <div class="col-6 col-sm-3 col-lg-3 mb-4 mb-md-0">
+                                <div class="avatar-item mb-0">
+                                    <img alt="image" src="~/assets/img/avatar/avatar-5.png" class="img-fluid" data-toggle="tooltip" title="Alfa Zulkarnain">
+                                    <div class="avatar-badge" title="Editor" data-toggle="tooltip"><i class="fas fa-wrench"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-3 col-lg-3 mb-4 mb-md-0">
+                                <div class="avatar-item mb-0">
+                                    <img alt="image" src="~/assets/img/avatar/avatar-4.png" class="img-fluid" data-toggle="tooltip" title="Egi Ferdian">
+                                    <div class="avatar-badge" title="Admin" data-toggle="tooltip"><i class="fas fa-cog"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-3 col-lg-3 mb-4 mb-md-0">
+                                <div class="avatar-item mb-0">
+                                    <img alt="image" src="~/assets/img/avatar/avatar-1.png" class="img-fluid" data-toggle="tooltip" title="Jaka Ramadhan">
+                                    <div class="avatar-badge" title="Author" data-toggle="tooltip"><i class="fas fa-pencil-alt"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-3 col-lg-3 mb-4 mb-md-0">
+                                <div class="avatar-item mb-0">
+                                    <img alt="image" src="~/assets/img/avatar/avatar-2.png" class="img-fluid" data-toggle="tooltip" title="Ryan">
+                                    <div class="avatar-badge" title="Admin" data-toggle="tooltip"><i class="fas fa-cog"></i></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -151,52 +206,41 @@
                         <div class="mb-4">
                             <div class="text-small float-right font-weight-bold text-muted">2,100</div>
                             <div class="font-weight-bold mb-1">Google</div>
-                            <div class="progress" data-height="3">
-                                <div class="progress-bar" role="progressbar" data-width="80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
+                            <b-progress value="80" :max="100" style="height:3px"></b-progress>
                         </div>
 
                         <div class="mb-4">
                             <div class="text-small float-right font-weight-bold text-muted">1,880</div>
-                            <div class="font-weight-bold mb-1">Facebook</div>
-                            <div class="progress" data-height="3">
-                                <div class="progress-bar" role="progressbar" data-width="67%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
+                            <div class="font-weight-bold mb-1">Facebook</div>                            
+                            <b-progress value="67" :max="100" style="height:3px"></b-progress>
                         </div>
 
                         <div class="mb-4">
                             <div class="text-small float-right font-weight-bold text-muted">1,521</div>
-                            <div class="font-weight-bold mb-1">Bing</div>
-                            <div class="progress" data-height="3">
-                                <div class="progress-bar" role="progressbar" data-width="58%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
+                            <div class="font-weight-bold mb-1">Bing</div>                            
+                            <b-progress value="58" :max="100" style="height:3px"></b-progress>
                         </div>
 
                         <div class="mb-4">
                             <div class="text-small float-right font-weight-bold text-muted">884</div>
-                            <div class="font-weight-bold mb-1">Yahoo</div>
-                            <div class="progress" data-height="3">
-                                <div class="progress-bar" role="progressbar" data-width="36%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
+                            <div class="font-weight-bold mb-1">Yahoo</div>                            
+                            <b-progress value="36" :max="100" style="height:3px"></b-progress>
                         </div>
 
                         <div class="mb-4">
                             <div class="text-small float-right font-weight-bold text-muted">473</div>
-                            <div class="font-weight-bold mb-1">Kodinger</div>
-                            <div class="progress" data-height="3">
-                                <div class="progress-bar" role="progressbar" data-width="28%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
+                            <div class="font-weight-bold mb-1">Kodinger</div>                            
+                            <b-progress value="28" :max="100" style="height:3px"></b-progress>
                         </div>
 
                         <div class="mb-4">
                             <div class="text-small float-right font-weight-bold text-muted">418</div>
-                            <div class="font-weight-bold mb-1">Multinity</div>
-                            <div class="progress" data-height="3">
-                                <div class="progress-bar" role="progressbar" data-width="20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
+                            <div class="font-weight-bold mb-1">Multinity</div>                            
+                            <b-progress value="20" :max="100" style="height:3px"></b-progress>
                         </div>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-header">
                         <h4>Popular Browser</h4>
@@ -231,15 +275,17 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="card mt-sm-5 mt-md-0">
                     <div class="card-header">
                         <h4>Visitors</h4>
                     </div>
                     <div class="card-body">
-                        <div id="visitorMap"></div>
+                        <map-box :long="115.372750" :lat="-8.253624" :zoom="0"></map-box>
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-6 col-md-6 col-12">
                 <div class="card">
                     <div class="card-header">
@@ -304,6 +350,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-header">
                         <h4 class="d-inline">Tasks</h4>
@@ -495,9 +542,21 @@
 </template>
 
 <script>
+
+import { reactive, toRefs } from '@vue/composition-api';
+import chartFunction from '~/functions/dashboard/index.js';
+
 export default {
-    layout: 'dashboard'
+    layout: 'dashboard',
+    setup () {
+        const { chart } = chartFunction();
+
+        return {
+            chart
+        }
+    }
 }
+
 </script>
 
 <style>
