@@ -6,6 +6,12 @@
 
         <div class="card">
             <div class="card-body">
+                <vue-editor></vue-editor>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
                 <div id="map"></div>
             </div>
         </div>

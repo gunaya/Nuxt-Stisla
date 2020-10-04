@@ -431,7 +431,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Content</label>
-                                <textarea class="summernote-simple"></textarea>
+                                <vue-editor previewStyle="horizontal"></vue-editor>
                             </div>
                         </div>
                         <div class="card-footer pt-0">
