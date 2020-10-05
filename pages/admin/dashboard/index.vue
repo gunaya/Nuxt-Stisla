@@ -492,6 +492,8 @@ export default {
     setup () {
         const { chart } = chartFunction();
 
+        
+
         return {
             chart
         }

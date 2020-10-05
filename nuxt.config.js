@@ -13,9 +13,9 @@ export default {
       { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' },
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js' },
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js' },
-      { src: '/js/stisla.js' },
-      { src: '/js/scripts.js' },
-      { src: '/js/custom.js' }
+      // { src: '/js/stisla.js' },
+      // { src: '/js/scripts.js' },
+      // { src: '/js/custom.js' }
     ],
     link: [
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.7.2/css/all.css', integrity:"sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr", crossorigin:"anonymous"},
@@ -32,7 +32,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    { src: '~/plugins/VueEditor.js', ssr: false }
+    { src: '~/plugins/VueEditor.js', ssr: false },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -53,7 +53,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // other
-    'vue-sweetalert2/nuxt',
+    // 'vue-sweetalert2/nuxt',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -67,9 +67,4 @@ export default {
     defaultLocale: 'id',
     locales: ['id']
   },
-
-  // router
-  router: {
-    // middleware: 'notAuthenticate'
-  }
 }

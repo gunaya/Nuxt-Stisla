@@ -1,5 +1,3 @@
-import { is } from "core-js/fn/object";
-
 export default {
     SET_USERDATA(state, user_data) {
         state.user_data = user_data;

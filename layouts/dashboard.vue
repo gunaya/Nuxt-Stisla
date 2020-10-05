@@ -24,6 +24,15 @@ export default {
         AppHeader,
         AppSidebar,
         AppFooter
+    },
+    head() {
+        return {
+            script: [
+                { src: '/js/stisla.js' },
+                { src: '/js/scripts.js' },
+                { src: '/js/custom.js' }
+            ],
+        }
     }
 }
 </script>
