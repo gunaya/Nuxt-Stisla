@@ -46,6 +46,7 @@
 import { reactive, ref } from '@vue/composition-api'
 
 export default {
+    middleware: 'notAuthenticate',
     layout: 'dashboard',
     setup () {
         const date = ref(new Date().toJSON().slice(0,10).replace(/-/g,'-'))

@@ -95,6 +95,7 @@
 import { reactive, ref } from '@vue/composition-api'
 
 export default {
+    middleware: 'notAuthenticate',
     layout: 'dashboard',
     setup () {
         const state = reactive({

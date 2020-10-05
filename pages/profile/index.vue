@@ -104,6 +104,7 @@
 import { reactive, toRefs, onMounted } from '@vue/composition-api'
 
 export default {
+    middleware: 'notAuthenticate',
     layout: 'dashboard',
     setup () {
         const profile = reactive({

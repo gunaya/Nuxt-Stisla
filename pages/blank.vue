@@ -11,6 +11,7 @@
 
 <script>
 export default {
+    middleware: 'notAuthenticate',
     layout: 'dashboard'
 }
 </script>

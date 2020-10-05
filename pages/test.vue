@@ -23,6 +23,7 @@ import { reactive, toRefs, ref, onMounted } from '@vue/composition-api';
 import { Map } from 'mapbox-gl';
 
 export default {
+    middleware: 'notAuthenticate',
     layout: 'dashboard',
 
     setup () {

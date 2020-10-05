@@ -487,6 +487,7 @@ import { reactive, toRefs } from '@vue/composition-api';
 import chartFunction from '~/functions/dashboard/index.js';
 
 export default {
+    middleware: 'notAuthenticate',
     layout: 'dashboard',
     setup () {
         const { chart } = chartFunction();

@@ -26,7 +26,8 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     '~/assets/css/style.css',
-    '~/assets/css/components.css'
+    '~/assets/css/components.css',
+    '~/assets/css/custom.css',
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -51,6 +52,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // other
+    'vue-sweetalert2/nuxt',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -63,5 +66,10 @@ export default {
   moment: {
     defaultLocale: 'id',
     locales: ['id']
+  },
+
+  // router
+  router: {
+    // middleware: 'notAuthenticate'
   }
 }

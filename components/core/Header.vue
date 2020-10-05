@@ -130,7 +130,7 @@
                     <nuxt-link to="/profile/activities" class="dropdown-item has-icon"><i class="fas fa-bolt"></i> Activities </nuxt-link>
                     <nuxt-link to="/admin/settings" class="dropdown-item has-icon"> <i class="fas fa-cog"></i> Settings </nuxt-link>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i> Logout </a>
+                    <a class="dropdown-item has-icon text-danger" @click="logout"> <i class="fas fa-sign-out-alt"></i> Logout </a>
                 </div>
             </li>
         </ul>
@@ -138,7 +138,19 @@
 </template>
 
 <script>
-export default {};
+import { reactive, ref } from '@vue/composition-api'
+
+export default {
+    setup(){
+        function logout(){
+            this.$store.dispatch('user/setLogin', null);
+            this.$router.push('/login')
+        }
+        return {
+            logout
+        }
+    }
+}
 </script>
 
 <style>
