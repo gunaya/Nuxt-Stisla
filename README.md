@@ -2,6 +2,9 @@
 
 > Stisla Bootstrap Admin Template based on NuxtJs Framework
 
+## Demo
+[Live Demo](https://nuxt-stisla.herokuapp.com/)
+
 
 ## Getting started
 
