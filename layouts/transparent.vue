@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import AppHeader from '~/components/core-2/Header';
-import AppSidebar from '~/components/core-2/Sidebar';
-import AppFooter from '~/components/core-2/Footer';
+import AppHeader from '~/components/core2/Header2';
+import AppSidebar from '~/components/core2/Sidebar2';
+import AppFooter from '~/components/core2/Footer2';
 
 export default {
     components: {
