@@ -62,12 +62,12 @@ $(function() {
   }, now_layout_class = null;
 
   var sidebar_sticky = function() {
-    if($("body").hasClass('layout-2')) {
-      $("body.layout-2 #sidebar-wrapper").stick_in_parent({
-        parent: $('body')
-      });
-      $("body.layout-2 #sidebar-wrapper").stick_in_parent({recalc_every: 1});
-    }
+    // if($("body").hasClass('layout-2')) {
+    //   $("body.layout-2 #sidebar-wrapper").stick_in_parent({
+    //     parent: $('body')
+    //   });
+    //   $("body.layout-2 #sidebar-wrapper").stick_in_parent({recalc_every: 1});
+    // }
   }
   sidebar_sticky();
 

@@ -1,7 +1,6 @@
 <template>
     <div class="main-wrapper">
         <div class="navbar-bg"></div>
-
         <app-header></app-header>
 
         <app-sidebar></app-sidebar>
