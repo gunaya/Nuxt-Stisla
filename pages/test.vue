@@ -1,7 +1,7 @@
 <template>
     <section class="section">
         <div class="section-header">
-            <h1>Map Test</h1>
+            <h1>{{ $t('test_page.section_header') }}</h1>
         </div>
 
         <div class="card">

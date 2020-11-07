@@ -1,7 +1,7 @@
 <template>
     <section class="section">
         <div class="section-header">
-            <h1>Dashboard</h1>
+            <h1>{{ $t('dashboard.section_header') }}</h1>
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
@@ -11,7 +11,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Admin</h4>
+                            <h4>{{ $t('dashboard.stat.admin') }}</h4>
                         </div>
                         <div class="card-body">
                             10
@@ -27,7 +27,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>News</h4>
+                            <h4>{{ $t('dashboard.stat.news') }}</h4>
                         </div>
                         <div class="card-body">
                             42
@@ -43,7 +43,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Reports</h4>
+                            <h4>{{ $t('dashboard.stat.reports') }}</h4>
                         </div>
                         <div class="card-body">
                             1,201
@@ -59,7 +59,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Online Users</h4>
+                            <h4>{{ $t('dashboard.stat.users') }}</h4>
                         </div>
                         <div class="card-body">
                             47
@@ -73,11 +73,11 @@
             <div class="col-lg-8 col-md-12 col-sm-12 col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Statistics</h4>
+                        <h4>{{ $t('dashboard.chart_stat.title') }}</h4>
                         <div class="card-header-action">
                             <div class="btn-group">
-                                <a href="#" class="btn btn-primary">Week</a>
-                                <a href="#" class="btn">Month</a>
+                                <a href="#" class="btn btn-primary">{{ $t('dashboard.chart_stat.switch_week') }}</a>
+                                <a href="#" class="btn">{{ $t('dashboard.chart_stat.switch_month') }}</a>
                             </div>
                         </div>
                     </div>
@@ -89,22 +89,22 @@
                             <div class="statistic-details-item">
                                 <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span> 7%</span>
                                 <div class="detail-value">$243</div>
-                                <div class="detail-name">Today's Sales</div>
+                                <div class="detail-name">{{ $t('dashboard.chart_stat.sales_today') }}</div>
                             </div>
                             <div class="statistic-details-item">
                                 <span class="text-muted"><span class="text-danger"><i class="fas fa-caret-down"></i></span> 23%</span>
                                 <div class="detail-value">$2,902</div>
-                                <div class="detail-name">This Week's Sales</div>
+                                <div class="detail-name">{{ $t('dashboard.chart_stat.sales_week') }}</div>
                             </div>
                             <div class="statistic-details-item">
                                 <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span>9%</span>
                                 <div class="detail-value">$12,821</div>
-                                <div class="detail-name">This Month's Sales</div>
+                                <div class="detail-name">{{ $t('dashboard.chart_stat.sales_month') }}</div>
                             </div>
                             <div class="statistic-details-item">
                                 <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span> 19%</span>
                                 <div class="detail-value">$92,142</div>
-                                <div class="detail-name">This Year's Sales</div>
+                                <div class="detail-name">{{ $t('dashboard.chart_stat.sales_year') }}</div>
                             </div>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
             <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Recent Activities</h4>
+                        <h4>{{ $t('dashboard.activity.title') }}</h4>
                     </div>
                     <div class="card-body">
                         <ul class="list-unstyled list-unstyled-border">
@@ -144,7 +144,7 @@
                             </li>
                         </ul>
                         <div class="text-center pt-1 pb-1">
-                            <a class="btn btn-primary btn-lg btn-round">View All</a>
+                            <a class="btn btn-primary btn-lg btn-round">{{ $t('dashboard.activity.view_all') }}</a>
                         </div>
                     </div>
                 </div>

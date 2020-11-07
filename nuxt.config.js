@@ -51,6 +51,30 @@ export default {
     '@nuxtjs/pwa',
     // other
     // 'vue-sweetalert2/nuxt',
+    ['nuxt-i18n', {
+      locales: [
+        {
+          name: 'Indonesian',
+          code: 'id',
+          iso: 'id-ID',
+          file: 'id-ID.js'
+        },
+        {
+          name: 'English',
+          code: 'en',
+          iso: 'en-US',
+          file: 'en-US.js'
+        },
+      ],
+      lazy: true,
+      langDir: 'lang/',
+      defaultLocale: 'id',
+      detectBrowserLanguage: {
+        useCookie: true,
+        cookieKey: 'i18n_redirected',
+        onlyOnRoot: true,
+      }
+    }],
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

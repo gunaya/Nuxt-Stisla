@@ -10,23 +10,23 @@
                 </li>
             </ul>
             <div class="search-element">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250" />
+                <input class="form-control" type="search" :placeholder="$t('header.search.placeholder')" aria-label="Search" data-width="250" />
                 <button class="btn" type="submit"> <i class="fas fa-search"></i> </button>
                 <div class="search-backdrop"></div>
                 <div class="search-result">
-                    <div class="search-header">Histories</div>
+                    <div class="search-header">{{ $t('header.search.histories') }}</div>
                     <div class="search-item">
                         <a href="#">How to hack NASA using CSS</a>
                         <a class="search-close" ><i class="fas fa-times"></i ></a>
                     </div>
-                    <div class="search-header">Result</div>
+                    <div class="search-header">{{ $t('header.search.result') }}</div>
                     <div class="search-item">
                         <a href="#">
                             <img class="mr-3 rounded" width="30" src="~/assets/img/products/product-3-50.png" alt="product" />
                             oPhone S9 Limited Edition
                         </a>
                     </div>
-                    <div class="search-header">Projects</div>
+                    <div class="search-header">{{ $t('header.search.projects') }}</div>
                     <div class="search-item">
                         <a href="#">
                             <div class="search-icon bg-danger text-white mr-3">
@@ -45,9 +45,9 @@
                 <a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep" ><i class="far fa-envelope"></i></a>
                 <div class="dropdown-menu dropdown-list dropdown-menu-right">
                     <div class="dropdown-header">
-                        Messages
+                        {{ $t('header.message.title') }}
                         <div class="float-right">
-                            <a href="#">Mark All As Read</a>
+                            <a href="#">{{ $t('header.message.mark_all') }}</a>
                         </div>
                     </div>
                     <div class="dropdown-list-content dropdown-list-message">
@@ -66,19 +66,19 @@
                         </a>
                     </div>
                     <div class="dropdown-footer text-center">
-                        <a href="" >View All <i class="fas fa-chevron-right"></i ></a>
+                        <a href="" > {{ $t('header.message.view_all') }} <i class="fas fa-chevron-right"></i ></a>
                     </div>
                 </div>
             </li>
 
             <!-- Notifications -->
             <li class="dropdown dropdown-list-toggle">
-                <a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep" ><i class="far fa-bell"></i ></a>
+                <a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg" ><i class="far fa-bell"></i ></a>
                 <div class="dropdown-menu dropdown-list dropdown-menu-right">
                     <div class="dropdown-header">
-                        Notifications
+                        {{ $t('header.notif.title') }}
                         <div class="float-right">
-                            <a href="#">Mark All As Read</a>
+                            <a href="#">{{ $t('header.message.mark_all') }}</a>
                         </div>
                     </div>
                     <div class="dropdown-list-content dropdown-list-icons">
@@ -111,8 +111,18 @@
                         </a>
                     </div>
                     <div class="dropdown-footer text-center">
-                        <a href="" >View All <i class="fas fa-chevron-right"></i ></a>
+                        <a href="" >{{ $t('header.message.view_all') }} <i class="fas fa-chevron-right"></i ></a>
                     </div>
+                </div>
+            </li>
+
+            <!-- Language Changer -->
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="nav-link nav-link-lg" ><i class="fas fa-cog"></i ></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-title">{{ $t('header.change_language') }}</div>
+                    <nuxt-link :to="switchLocalePath('id')" class="dropdown-item has-icon"><strong>ID</strong> Bahasa Indonesia</nuxt-link>
+                    <nuxt-link :to="switchLocalePath('en')" class="dropdown-item has-icon"><strong>EN</strong> English </nuxt-link>
                 </div>
             </li>
 
@@ -125,12 +135,12 @@
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <div class="dropdown-title">Logged in 5 min ago</div>
-                    <nuxt-link to="/profile" class="dropdown-item has-icon"><i class="far fa-user"></i> Profile</nuxt-link>
-                    <nuxt-link to="/profile/activities" class="dropdown-item has-icon"><i class="fas fa-bolt"></i> Activities </nuxt-link>
-                    <nuxt-link to="/admin/settings" class="dropdown-item has-icon"> <i class="fas fa-cog"></i> Settings </nuxt-link>
+                    <div class="dropdown-title">{{ $t('header.login') }} 5 min {{ $t('header.login_when') }}</div>
+                    <nuxt-link :to="localePath('profile')" class="dropdown-item has-icon"><i class="far fa-user"></i> {{ $t('header.profile') }}</nuxt-link>
+                    <nuxt-link :to="localePath('/profile/activities')" class="dropdown-item has-icon"><i class="fas fa-bolt"></i> {{ $t('header.activities') }} </nuxt-link>
+                    <nuxt-link :to="localePath('/admin/settings')" class="dropdown-item has-icon"> <i class="fas fa-cog"></i> {{ $t('header.settings') }} </nuxt-link>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item has-icon text-danger" @click="logout"> <i class="fas fa-sign-out-alt"></i> Logout </a>
+                    <a class="dropdown-item has-icon text-danger" @click="logout"> <i class="fas fa-sign-out-alt"></i> {{ $t('header.logout') }} </a>
                 </div>
             </li>
         </ul>
