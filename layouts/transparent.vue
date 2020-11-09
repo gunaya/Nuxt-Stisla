@@ -194,23 +194,20 @@
 // import AppSidebar from '~/components/core2/Sidebar2';
 // import AppFooter from '~/components/core2/Footer2';
 
-// export default {
-//     components: {
-//         AppHeader, AppSidebar, AppFooter
-//     },
-//     head() {
-//         return {
-//             script: [
-//                 { src: '/js/stisla.js' },
-//                 { src: '/js/scripts.js' },
-//                 { src: '/js/custom.js' }
-//             ],
-//             bodyAttrs : {
-//                 class: 'layout-2'
-//             }
-//         }
-//     }
-// }
+export default {
+    head() {
+        return {
+            script: [
+                { src: '/js/stisla.js' },
+                { src: '/js/scripts.js' },
+                { src: '/js/custom.js' }
+            ],
+            bodyAttrs : {
+                class: 'layout-2'
+            }
+        }
+    }
+}
 </script>
 
 <style>

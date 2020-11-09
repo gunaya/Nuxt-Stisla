@@ -202,25 +202,15 @@
 // import AppTopnav from '~/components/core3/Topnav';
 // import AppFooter from '~/components/core3/Footer3'
 
-// export default {
-//     components: {
-//         AppHeader,
-//         AppTopnav,
-//         AppFooter
-//     },
-//     head() {
-//         return {
-//             // script: [
-//             //     { src: '/js/stisla.js' },
-//             //     { src: '/js/scripts.js' },
-//             //     { src: '/js/custom.js' }
-//             // ],
-//             bodyAttrs : {
-//                 class: 'layout-3'
-//             }
-//         }
-//     }
-// }
+export default {
+    head() {
+        return {
+            bodyAttrs : {
+                class: 'layout-3'
+            }
+        }
+    }
+}
 </script>
 
 <style>
