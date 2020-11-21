@@ -1,5 +1,10 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
+  target: 'static',
+  router: {
+    base: '/gunaya/'
+  },
+
   head: {
     title: 'nuxt-stisla',
     meta: [

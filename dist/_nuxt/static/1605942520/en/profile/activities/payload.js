@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/en/profile/activities", {data:[{}],fetch:[],mutations:[]});
