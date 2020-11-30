@@ -89,4 +89,9 @@ export default {
     defaultLocale: 'id',
     locales: ['id']
   },
+
+  mode: 'spa',
+  router: {
+    base: '/nuxt-stisla/'
+  },
 }
