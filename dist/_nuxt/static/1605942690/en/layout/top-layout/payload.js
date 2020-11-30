@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en/layout/top-layout", {data:[{}],fetch:[],mutations:[]});
